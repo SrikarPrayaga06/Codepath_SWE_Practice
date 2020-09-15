@@ -20,5 +20,15 @@ def fibonacci(n):
         a,b=b,a+b
     return b
 
+def twosum(arr,val):
+    for x in arr:
+        for y in arr:
+            if x+y==val:
+                return [x,y]
+    return None
+#print(twosum([3, 2, 6, 9, 5],9))
+def twosum_beta(arr,val):
+
+
 
 
