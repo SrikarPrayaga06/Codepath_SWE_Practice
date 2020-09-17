@@ -27,7 +27,18 @@ def twosum(arr,val):
                 return [x,y]
     return None
 #print(twosum([3, 2, 6, 9, 5],9))
-def twosum_beta(arr,val):
+def twosum_beta(arr,x):
+    if not arr or len(arr)<2: #covers the edge cases where the a non array or array of length of 1/0 is passed
+        return None
+    s=set() #set is created
+    s.add(arr[0]) #first value of the array is added to the set
+    for i in range(1,len(arr)): # x=1 y=3 x+y=4 x=4-y is being used to make the solution more efficient
+        if x-arr[i] in s: #
+            return (x-arr[i],arr[i]) # returns the first pair of numbers that sum up to x
+        s.add(arr[i]) #
+    return None
+
+
 
 
 
