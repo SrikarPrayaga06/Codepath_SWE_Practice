@@ -1,3 +1,4 @@
+#week 1 work
 def fizzbuzz(arr):
     for x in arr:
         if x%3==0 and x%5==0:
@@ -19,7 +20,7 @@ def fibonacci(n):
     for i in range(n-1):
         a,b=b,a+b
     return b
-
+# week 2 work
 def twosum(arr,val):
     for x in arr:
         for y in arr:
@@ -37,9 +38,27 @@ def twosum_beta(arr,x):
             return (x-arr[i],arr[i]) # returns the first pair of numbers that sum up to x
         s.add(arr[i]) #
     return None
-
-
-
-
-
-
+# week 3 --- will come back to
+# week 4
+# get length of a linked list
+#iterate through the list until null is reached
+def length(self,head):
+    count=0
+    while head is not None:
+        count+=1
+        head=head.next
+    return count
+#time complexity: o(n) space complexity:
+# given a linked list determine if it is a palindrome
+#plan: add the data into an array and invert it using [::-1] time complexity:O(n) space complexity:O(n) cuz dealing with n number of elenents.
+#space complexity can be optimized to be o(1)
+def palindrome(self,head):
+    arr=[]
+    while head:
+        arr.append(head.val)
+        heahd=head.next
+    xda=[]
+    xda=arr[::-1]
+    if arr==xda:
+        return True
+    return False
